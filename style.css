@@ -1,0 +1,645 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+  width: 60%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.scroll{
+  position: fixed;
+  bottom: -54px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color:#f44336;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 9999;
+}
+.scroll.active{
+  bottom: 32px;
+  opacity: 1;
+}
+.scroll:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 46.5px;
+  width: 100%;
+  background-color: #000;
+  z-index: 99999;
+}
+
+.header.active{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  animation: headeron ease-in 0.5s;
+}
+@keyframes headeron {
+  from {
+    top: -48px;
+  }
+  to {
+    top: 0;
+  }
+}
+.header > .header__menu > ul{
+  display: flex;
+  list-style: none;
+}
+.header__menu > ul > li{
+  position: relative;
+  padding: 0 24px;
+}
+.header__menu > ul > li > a{
+  line-height: 46px;
+  text-decoration: none;
+  color: white;
+}
+.header__menu ul li:hover{
+  background-color: #ccc;
+  cursor: pointer;
+}
+.header__menu ul li:hover a{
+  color: #000;
+}
+.header__menu ul li:hover .header__menu--submenu{
+  display: block;
+  animation: submenuon ease-in-out 0.4s;
+}
+.header__menu > ul > li:nth-child(5) > a::after{
+  font-family: "FontAwesome";
+  content: "\f0d7";
+  margin-left: 5px;
+  font-size: 15px;
+}
+@keyframes submenuon {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.header__menu--submenu{
+  position: absolute;
+  display: none;
+  list-style: none;
+  left: 0;
+  min-width: 150px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+.header__menu--submenu li{
+  padding: 10px 15px;
+}
+.header__menu--submenu li a{
+  color: #000;
+  text-decoration: none;
+}
+.header .header__search{
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 60px;
+  transition: all 0.5s;
+  height: 100%;
+}
+.header__search.active{
+  width: 300px;
+}
+.header__search .searchbox--btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.header__search .searchbox--btn:hover{
+  background-color: #f44336;
+  cursor: pointer;
+}
+.header__search .searchbox--input{
+  outline: none;
+  font-size: 18px;
+  padding: 0 15px;
+  width: 240px;
+}
+/* end header */
+
+.slider{
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.slider--one{
+  background-image: url('https://www.w3schools.com/w3images/la.jpg');
+}
+.slider--two{
+  background-image: url('https://www.w3schools.com/w3images/chicago.jpg');
+}
+.slider--three{
+  background-image: url('https://www.w3schools.com/w3images/ny.jpg');
+}
+.slider .slider__content{
+  position: absolute;
+  bottom: 60px;
+  text-align: center;
+  color: white;
+  right: 0;
+  left: 0;
+}
+.slider .slider__content h3{
+  margin: 25px 0;
+}
+.slider .slider__content p{
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* end slider */
+
+.content{
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.content .content__text h2{
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+.content .content__text .p--one{
+  font-style: italic;
+  color: rgb(58, 58, 58);
+  opacity: 0.8;
+  margin-top: 25px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.content .content__text .p--two{
+  margin: 16px 0;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.content .content__mem{
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+.content .content__mem .member--item{
+  position: relative;
+  width: 30%;
+  height: 300px;
+  background-color: black;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.item--one{
+  background-image: url('https://photo-cms-tpo.zadn.vn/w890/Uploaded/2022/lkyqski001/2017_09_13/8b_IHYH.jpg');
+}
+.item--two{
+  background-image: url('https://www.rappler.com/tachyon/2020/12/johnlennonfacebookphoto.jpg');
+}
+.item--three{
+  background-image: url('https://i.scdn.co/image/ab6761610000e5ebec1bd421630bf3ad110c09fa');
+}
+.member--item .layer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  border-radius: 20px;
+}
+.member--item:hover .layer{
+  display: block;
+}
+.member--item .member--item-info{
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: -40px;
+  color: white;
+  transition: all 0.5s;
+}
+.member--item:hover .member--item-info{
+  bottom: 130px;
+}
+.member--item .member--item-info h4{
+  letter-spacing: 2;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+/* end content */
+
+.black{
+  width: 100%;
+  background-color: #000;
+}
+.tour{
+  padding-top: 100px;
+  text-align: center;
+  padding-bottom: 120px;
+}
+.tour > h1{
+  color: white;
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+.tour > p{
+  color: rgb(141, 141, 141);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 20px 0 25px 0;
+}
+.tour .tuor__calander li{
+  width: 100%;
+  background-color: white;
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 0.5px solid rgb(194, 194, 194);
+  align-items: center;
+}
+.tour .tuor__calander li:nth-child(3){
+  justify-content: space-between;
+  border: none;
+}
+.tuor__calander li p{
+  color: rgb(122, 122, 122);
+  margin-left: 20px;
+  margin-right: 25px;
+}
+.tuor__calander li p,
+.tuor__calander li span{
+  font-size: 14px;
+}
+.tuor__calander li:nth-child(1) span,
+.tuor__calander li:nth-child(2) span{
+  padding: 5px;
+  background-color: #f44336;
+  color: white;
+}
+.tuor__calander li:nth-child(3) span{
+  margin-right: 40px;
+  display: block;
+  padding: 5px 10px;
+  background-color: #000;
+  border-radius: 50%;
+  color: white;
+}
+.ticket{
+  margin-top: 30px;
+  display:flex;
+}
+.ticket .ticket__item{
+  width: 33%;
+  background-color: white;
+}
+.ticket .ticket__item:nth-child(1){
+  margin-right: 15px;
+}
+.ticket .ticket__item:nth-child(3){
+  margin-left: 15px;
+}
+.ticket .ticket__item .ticket__item--img{
+  background-image: var(--background);
+  height: 183px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.ticket__item .ticket__item--img .layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.ticket__item .ticket__item--img:hover .layer{
+  display: block;
+}
+.ticket .ticket__item .ticket__item--content{
+  text-align: left;
+  padding-left: 15px;
+}
+.ticket__item .ticket__item--content h4{
+  margin: 20px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.ticket__item .ticket__item--content p{
+  margin-bottom: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+.ticket__item .ticket__item--content span{
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ticket__item .ticket__item--content button{
+  padding: 10px 16px;
+  margin-top: 15px;
+  margin-bottom: 16px;
+  display: block;
+  border: none;
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+.ticket__item .ticket__item--content button:hover{
+  background-color: #ccc;
+  cursor: pointer;
+  color: #000;
+}
+/* end tour */
+
+.contact{
+  padding: 100px 0 100px 0;
+  text-align: center;
+  width: 100%;
+}
+.contact h1{
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+.contact > p{
+  margin: 20px 0 50px 0;
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.6;
+}
+.contact > .contact__info{
+  display: flex;
+  justify-content: space-between;
+}
+.contact__info .contact__info--addr{
+  text-align: left;
+}
+.contact__info--addr li p::before{
+  margin-right: 25px;
+  font-size: 14px;
+}
+.contact__info--addr li:nth-child(1) p::before{
+  font-family: "FontAwesome";
+  content: "\f3c5";
+}
+.contact__info--addr li:nth-child(2) p::before{
+  font-family: "FontAwesome";
+  content: "\f095";
+}
+.contact__info--addr li:nth-child(3) p::before{
+  font-family: "FontAwesome";
+  content: "\f0e0";
+}
+.contact__info--addr ul{
+  list-style: none;
+}
+.contact__info--addr li{
+  padding: 5px 0;
+}
+.contact__info--form input{
+  padding: 10px;
+  height: 40px;
+  outline: none;
+  border: 0.5px solid #ccc;
+  font-size: 15px;
+  margin-right: var(--marginright);
+}
+.contact__info--form input:nth-child(1),
+.contact__info--form input:nth-child(2){
+    width: 200px;
+    margin-bottom: 10px;
+}
+.contact__info--form input:nth-child(3){
+  display: block;
+  width: 100%;
+}
+.contact__info--form button{
+  float: right;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: none;
+  background-color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: white;
+}
+.contact__info--form button:hover{
+  cursor: pointer;
+  background-color: #ccc;
+  color: black;
+}
+
+/* end contact */
+
+.map{
+  width: 100%;
+  height: auto;
+}
+.map img{
+  width: 100%;
+  filter: grayscale(50%);
+}
+
+/* end map */
+
+.footer{
+  text-align: center;
+  padding: 64px 0;
+  background-color: #f7f7f7;
+}
+.footer .footer__icon{
+  margin-bottom: 25px;
+}
+.footer .footer__icon a{
+  font-size: 22px;
+  color: #000;
+  opacity: 0.6;
+}
+.footer .footer__watermark p a{
+  color: #000;
+}
+.footer .footer__watermark p{
+  font-size: 15px;
+  color: #000;
+  opacity: 0.6;
+}
+
+/* modal */
+
+.modal{
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99999999;
+  display: none;
+  align-items: center;
+}
+.modal.active{
+  animation: FadeInModal ease 0.5s;
+  display: flex;
+}
+@keyframes FadeInModal {
+  from {
+    opacity: 0;
+    top: -1200px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+@keyframes FadeOutModal {
+  rom {
+    opacity: 1;
+    top: 0px;
+  }
+  to {
+    opacity: 0;
+    top: -1200px;
+  }
+}
+.modal__container{
+  width: 70%;
+  margin: 0 auto;
+  height: 450px;
+  display: flex;
+}
+.modal__container .modal--left{
+  width: 40%;
+  height: 100%;
+}
+.modal__container .modal--right{
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background-color: white;
+}
+.modal--left .modal--img {
+  height: 100%;
+  width: 100%;
+}
+.modal--right .modal--header{
+  padding: 50px 0 20px 0;
+  text-align: center;
+  position: relative;
+}
+.modal--right .modal--header h2{
+  color: #000;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.modal--right .modal--header .close--modal{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal--right .modal--body{
+  padding: 10px 30px;
+}
+.modal--right .modal--body label{
+  margin-top: 25px ;
+  margin-bottom: 15px ;
+}
+.modal--right .modal--body label,
+.modal--right .modal--body input{
+  display: block;
+}
+.modal--right .modal--body input{
+  width: 100%;
+  height: 40px;
+  outline: none;
+  font-size: 15px;
+  padding: 10px 10px;
+}
+.modal--body .modal--body-footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  align-items: center;
+}
+.modal--body .modal--body-footer .btn-pay{
+  float: right;
+  padding: 8px 16px;
+  background-color: #000;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+.modal--body .modal--body-footer .btn-pay:hover{
+  background-color: #ccc;
+  cursor: pointer;
+  color: black;
+}
+.modal--body-footer button a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.modal--body .modal--body-footer p{
+  font-size: 16px;
+  font-weight: 500;
+}
+.modal--body .modal--body-footer p a{
+  color: rgb(17, 213, 248);
+}
+
+/* menu moble icon */
+.header .header__moblie--icon{
+  display: none;
+}

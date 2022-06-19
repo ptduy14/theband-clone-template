@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>The Band</title>
+</head>
+<body>
+    <!-- button scroll to top -->
+    <div class="scroll">
+        <i class="fa-solid fa-angle-up"></i>
+    </div>
+    <!-- header -->
+    <div class="header">
+        <div class="header__menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#band">BAND</a></li>
+                <li><a href="#tour">TOUR</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#">MORE</a>
+                    <ul class="header__menu--submenu">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extract</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="header__moblie--icon js-header__moblie--icon">
+            <i class="fa-solid fa-bars js-moblie-icon"></i>
+        </div>
+        <form action="">
+            <div class="header__search">
+                <input type="text" class="searchbox--input">
+                <div class="searchbox--btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+        </form>
+    </div>
+    <!-- slider -->
+    <div onclick="slideShow()" class="slider slider--one">
+        <div class="slider__content">
+            <h3>Chicago</h3>
+            <p>Thank you, Chicago - A night we won't forget.</p>
+        </div>
+    </div>
+    <!-- the band info -->
+    <div class="container">
+        <div id="band" class="content">
+            <div class="content__text">
+                <h2>THE BAND</h2>
+                <p class="p--one">We love music</p>
+                <p class="p--two">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+            <div class="content__mem">
+                <div class="member--item item--one">
+                    <div class="layer"></div>
+                    <div class="member--item-info">
+                        <h4>Vũ Đinh Trọng Thắng</h4>
+                    </div>
+                </div>
+                <div class="member--item item--two">
+                    <div class="layer"></div>
+                    <div class="member--item-info">
+                        <h4>Jonh Lennon</h4>
+                    </div>
+                </div>
+                <div class="member--item item--three">
+                    <div class="layer"></div>
+                    <div class="member--item-info">
+                        <h4>Vũ.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- the band tour -->
+    <div class="black">
+        <div class="container">
+            <div id="tour" class="tour">
+                <h1>TOUR DATES</h1>
+                <p>Remember to book your tickets!</p>
+                <ul class="tuor__calander">
+                    <li><p>September</p><span>Sold out</span></li>
+                    <li><p>October</p><span>Sold out</span></li>
+                    <li><p>November</p><span>3</span></li>
+                </ul>
+
+                <div class="ticket">
+                    <div class="ticket__item">
+                        <div class="ticket__item--img" style="--background: url('https://www.w3schools.com/w3images/newyork.jpg')">
+                            <div class="layer"></div>
+                        </div>
+                        <div class="ticket__item--content">
+                            <h4>New York</h4>
+                            <p>Fri 27 Nov 2016</p> 
+                            <span>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</span>
+                            <button class="js-btn-buy">Buy Tickets</button>
+                        </div>
+                    </div>
+                    <div class="ticket__item ">
+                        <div class="ticket__item--img"  style="--background: url('https://www.w3schools.com/w3images/paris.jpg')">
+                            <div class="layer"></div>
+                        </div>
+                        <div class="ticket__item--content">
+                            <h4>Paris</h4>
+                            <p>Sat 28 Nov 2016</p> 
+                            <span>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</span>
+                            <button class="js-btn-buy">Buy Tickets</button>
+                        </div>
+                    </div>
+                    <div class="ticket__item">
+                        <div class="ticket__item--img" style="--background: url('https://www.w3schools.com/w3images/sanfran.jpg')">
+                            <div class="layer"></div>
+                        </div>
+                        <div class="ticket__item--content">
+                            <h4>San Franciscok</h4>
+                            <p>Sun 29 Nov 2016</p> 
+                            <span>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</span>
+                            <button class="js-btn-buy">Buy Tickets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- the band contact -->
+    <div class="container">
+        <div id="contact" class="contact">
+            <h1>CONTACT</h1>
+            <p>Fan? Drop a note!</p>
+            <div class="contact__info">
+                <div class="contact__info--addr">
+                    <ul>
+                        <li>
+                            <p>Chicago, US</p>
+                        </li>
+                        <li>
+                            <p>Phone: +00 151515</p>
+                        </li>
+                        <li>
+                            <p>Email: mail@mail.com</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact__info--form">
+                    <form action="">
+                        <input type="text" placeholder="Name" style="--marginright: 10px">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Massage">
+                        <button disabled>SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- the band map -->
+    <div class="map">
+        <img src="https://www.w3schools.com/w3images/map.jpg" alt="">
+    </div>
+
+    <div class="footer">
+        <div class="footer__icon">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-snapchat-square"></i></a>
+            <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <div class="footer__watermark">
+            <p>Powered by ptduy <br> clone The Band of <a href=""> w3.css</a></p>
+        </div>
+    </div>
+
+    <div class="modal js-modal">
+        <div class="modal__container js-modal__container">
+            <div class="modal--left">
+                <img class="modal--img" src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/msnbc/Components/Photos/041028/041028_lennonMusic_vmed_1p.jpg" alt="">
+            </div>
+            <div class="modal--right">
+                <div class="modal--header">
+                    <div class="close--modal js-close--modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <h2>buy tickets</h2>
+                </div>
+                <div class="modal--body">
+                    <form action="">
+                        <label for=""><i class="fa-solid fa-ticket"></i> 1 ticket, <i class="fa-solid fa-person"></i> 15$ person</label>
+                        <input type="text" placeholder="How many ?">
+                        <label for=""><i class="fa-solid fa-envelopes-bulk"></i> Send to</label>
+                        <input type="text" placeholder="Email">
+                        <div class="modal--body-footer">
+                            <p>Need <a>Help?</a> </p>
+                            <div class="btn-pay js-btn-pay">Pay <i class="fa fa-check"></i></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scrip.js"></script>
+</html>

@@ -1,0 +1,99 @@
+@media (max-width: 1023px) and (min-width: 740px) {
+    .container{
+        width: 94%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 739px) {
+    .container{
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .header{
+        overflow: hidden;
+        position: relative;
+        display: block;
+    }
+    .header.active-moblie{
+        height: 350px;
+        animation: FadeInMoblieHeader ease 0.5s;
+    }
+    @keyframes FadeInMoblieHeader {
+        from {
+            height: 46.5px;
+        }
+        to {
+            height: 350px;
+        }
+    }
+    .header > .header__menu > ul{
+        display: block;
+    }
+    .header > .header__menu > ul > li:nth-child(1){
+        display: inline-block;
+    }
+    .header form{
+        display: none;
+    }
+    .content .content__mem{
+        align-items: center;
+        flex-direction: column;
+    }
+    .content .content__mem .member--item{
+        width: 63%;
+        margin-bottom: 20px;
+    }
+    .ticket{
+        flex-direction: column;
+        align-items: center;
+    }
+    .ticket .ticket__item{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .ticket .ticket__item:nth-child(1){
+        margin-right: unset;
+    }
+    .ticket .ticket__item:nth-child(3){
+        margin-left: unset;
+    }
+    .contact > .contact__info{
+        flex-direction: column;
+    }
+    .contact__info--addr{
+        margin-bottom: 20px;
+    }
+    .contact__info--form input{
+        display: block;
+        margin-right: unset;
+        min-width: 100%;
+    }
+    .modal--left{
+        display: none;
+    }
+    .modal--right{
+        min-width: 100%;
+    }
+    .modal__container{
+        width: 85%;
+    }
+    .header .header__moblie--icon{
+        display: flex;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 50px;
+        height: 49px;
+        align-items: center;
+        justify-content: center;
+    }
+    .header .header__moblie--icon i{
+        color: white;
+        font-size: 20px;
+    }
+    .header__menu ul li:hover .header__menu--submenu{
+        position: initial;
+    }
+}
